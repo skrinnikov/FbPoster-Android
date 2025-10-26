@@ -1,0 +1,31 @@
+@@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fb-poster"
+version = "0.1.0"
+description = "RSS parser and Facebook Groups posting CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+dependencies = [
+  "feedparser>=6.0.11",
+  "requests>=2.31.0",
+  "python-dotenv>=1.0.1"
+]
+
+[project.urls]
+Homepage = "https://example.com"
+
+[project.scripts]
+fb-poster = "fb_poster.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
